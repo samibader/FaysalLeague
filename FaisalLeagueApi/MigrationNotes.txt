@@ -1,0 +1,16 @@
+﻿Default Project Data.Access
+
+PM> cd "C:\Users\sami bader\OneDrive\Faysal\expenses-master\src\FaisalLeague.Data.Access"
+PM> add-migration RoleDescription
+PM> update-database
+
+
+
+
+
+
+
+
+
+
+PM> dotnet ef migrations add InitialMigration --startup-project ../FaisalLeague -v

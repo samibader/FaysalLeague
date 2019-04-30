@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\Old Migrations\**" />
+    <EmbeddedResource Remove="Migrations\Old Migrations\**" />
+    <None Remove="Migrations\Old Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20170525113918_InitialCreate.cs" />
+    <Compile Remove="Migrations\20170525113918_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20170525150451_UserRoles.cs" />
+    <Compile Remove="Migrations\20170525150451_UserRoles.Designer.cs" />
+    <Compile Remove="Migrations\20170526090430_AddExpenses.cs" />
+    <Compile Remove="Migrations\20170526090430_AddExpenses.Designer.cs" />
+    <Compile Remove="Migrations\20181005130029_AddUserSeasonLeague.cs" />
+    <Compile Remove="Migrations\AddAdminToNewDatabase.cs" />
+    <Compile Remove="Migrations\SeedRoles.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FaisalLeague.Data.Model\FaisalLeague.Data.Model.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,56 @@
+﻿@page
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <form name="loginform" id="loginform" method="post" action="/login/authorize">
+            <input type="text" name="username" id="username" class="text" value="" placeholder="username" />
+            <input type="text" name="password" id="password" class="text" value="" placeholder="password" />
+            <input type="button" name="sendbtn" value="authorize" class="page" onclick="authorize();" />
+            <br />
+            token : <span id="tokenspan"></span>
+            <br />
+            <br />
+            <input type="button" name="socketbtn" value="Open Socket" onclick="opensocket();" />  Results displayed in console
+            <br />
+            <input type="button" name="connectionbtn" value="Get connectionID" onclick="getconnectionid();" /> Results displayed in console
+            <br />
+            <input type="button" name="userIdbtn" value="Get UserIdentifier" onclick="getUserIdentifier();" /> Results displayed in console
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            @*User..........<input type="text" id="userInput" />
+                <br />*@
+            Message...<input type="text" id="messageInput" />
+            <input type="button" id="sendButton" value="Send Message" />
+            <input type="button" id="sendPrivateButton" value="Send Private Message" />
+            <input type="button" id="disconnectButton" value="Disconnect" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            Question ID ...<input type="text" id="questionIdInput" />
+            Answer (Choice ID) ...<input type="text" id="choiceIdInput" />
+                                  <input type="button" id="getQuestionButton" value="GetQuestion" />
+            <input type="button" id="answerButton" value="Answer" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/signal.js"></script>

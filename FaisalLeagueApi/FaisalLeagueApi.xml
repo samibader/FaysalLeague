@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FaisalLeagueApi</name>
+    </assembly>
+    <members>
+        <member name="M:FaisalLeagueApi.Controllers.UsersController.Get">
+            <summary>
+            Get Queryable list of users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FaisalLeagueApi.Controllers.UsersController.SetUserImage(System.Int32)">
+            <summary>
+            Uplaods an image to the server.
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:FaisalLeagueApi.Controllers.UsersController.SetImage">
+            <summary>
+            Set current user profile image
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FaisalLeagueApi.SignalR.PeriodicTaskFactory">
+            <summary>
+            Factory class to create a periodic Task to simulate a <see cref="T:System.Threading.Timer"/> using <see cref="T:System.Threading.Tasks.Task">Tasks.</see>
+            </summary>
+        </member>
+        <member name="M:FaisalLeagueApi.SignalR.PeriodicTaskFactory.Start(System.Action,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken,System.Threading.Tasks.TaskCreationOptions)">
+            <summary>
+            Starts the periodic task.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="intervalInMilliseconds">The interval in milliseconds.</param>
+            <param name="delayInMilliseconds">The delay in milliseconds, i.e. how long it waits to kick off the timer.</param>
+            <param name="duration">The duration.
+            <example>If the duration is set to 10 seconds, the maximum time this task is allowed to run is 10 seconds.</example></param>
+            <param name="maxIterations">The max iterations.</param>
+            <param name="synchronous">if set to <c>true</c> executes each period in a blocking fashion and each periodic execution of the task
+            is included in the total duration of the Task.</param>
+            <param name="cancelToken">The cancel token.</param>
+            <param name="periodicTaskCreationOptions"><see cref="T:System.Threading.Tasks.TaskCreationOptions"/> used to create the task for executing the <see cref="T:System.Action"/>.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+            <remarks>
+            Exceptions that occur in the <paramref name="action"/> need to be handled in the action itself. These exceptions will not be 
+            bubbled up to the periodic task.
+            </remarks>
+        </member>
+        <member name="M:FaisalLeagueApi.SignalR.PeriodicTaskFactory.MainPeriodicTaskAction(System.Int32,System.Int32,System.Int32,System.Int32,System.Threading.CancellationToken,System.Diagnostics.Stopwatch,System.Boolean,System.Action,System.Threading.Tasks.TaskCreationOptions)">
+            <summary>
+            Mains the periodic task action.
+            </summary>
+            <param name="intervalInMilliseconds">The interval in milliseconds.</param>
+            <param name="delayInMilliseconds">The delay in milliseconds.</param>
+            <param name="duration">The duration.</param>
+            <param name="maxIterations">The max iterations.</param>
+            <param name="cancelToken">The cancel token.</param>
+            <param name="stopWatch">The stop watch.</param>
+            <param name="synchronous">if set to <c>true</c> executes each period in a blocking fashion and each periodic execution of the task
+            is included in the total duration of the Task.</param>
+            <param name="wrapperAction">The wrapper action.</param>
+            <param name="periodicTaskCreationOptions"><see cref="T:System.Threading.Tasks.TaskCreationOptions"/> used to create a sub task for executing the <see cref="T:System.Action"/>.</param>
+        </member>
+        <member name="M:FaisalLeagueApi.SignalR.PeriodicTaskFactory.CheckIfCancelled(System.Threading.CancellationToken)">
+            <summary>
+            Checks if cancelled.
+            </summary>
+            <param name="cancelToken">The cancel token.</param>
+        </member>
+    </members>
+</doc>
