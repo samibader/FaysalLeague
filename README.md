@@ -1,2 +1,2 @@
 # Faysal League Competition Native App Backend
-ASP.NET Core + N-Tier Architecture
+ASP.NET Core API + N-Tier Architecture + C# + SignalR
